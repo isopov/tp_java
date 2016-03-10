@@ -26,7 +26,10 @@ public class Users {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAllUsers() {
         final Collection<UserProfile> allUsers = accountService.getAllUsers();
-        return Response.status(Response.Status.OK).entity(allUsers.toArray(new UserProfile[allUsers.size()])).build();
+        return Response
+                .status(Response.Status.OK)
+                .entity(allUsers.toArray(new UserProfile[allUsers.size()]))
+                .build();
     }
 
     @GET
