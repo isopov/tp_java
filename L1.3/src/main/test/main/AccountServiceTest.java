@@ -11,11 +11,11 @@ import static org.junit.Assert.assertTrue;
  * Created by esin on 10.03.2016.
  */
 public class AccountServiceTest {
-    private AccountService accountService;
+    private AccountServiceMapImpl accountService;
 
     @Before
     public void setupAccountService(){
-        accountService = new AccountService();
+        accountService = new AccountServiceMapImpl();
     }
 
     @Test

@@ -3,33 +3,14 @@ package main;
 import rest.UserProfile;
 
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @author esin88
+ * Created by e.shubin on 24.03.2016.
  */
-public class AccountService {
-    private Map<String, UserProfile> users = new ConcurrentHashMap<>();
+public interface AccountService {
+    Collection<UserProfile> getAllUsers();
 
-    public AccountService() {
-        users.put("admin", new UserProfile("admin", "admin"));
-        users.put("guest", new UserProfile("guest", "12345"));
-    }
+    boolean addUser(String userName, UserProfile userProfile);
 
-    public Collection<UserProfile> getAllUsers() {
-        return users.values();
-    }
-
-    public boolean addUser(String userName, UserProfile userProfile) {
-        if (users.containsKey(userName))
-            return false;
-        users.put(userName, userProfile);
-        return true;
-    }
-
-    public UserProfile getUser(String userName) {
-        return users.get(userName);
-    }
+    UserProfile getUser(String userName);
 }
