@@ -7,8 +7,22 @@
     <groupId>L2.2</groupId>
     <artifactId>L2.2</artifactId>
     <version>1.0</version>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <org.jetbrains.annotations.version>13.0</org.jetbrains.annotations.version>
+        <org.eclipse.jetty.version>9.3.7.v20160115</org.eclipse.jetty.version>
+        <org.glassfish.jersey.version>2.22.2</org.glassfish.jersey.version>
+    </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>${org.jetbrains.annotations.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.freemarker</groupId>
             <artifactId>freemarker</artifactId>
@@ -18,31 +32,31 @@
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-server</artifactId>
-            <version>9.2.0.M0</version>
+            <version>${org.eclipse.jetty.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-webapp</artifactId>
-            <version>9.2.0.M0</version>
+            <version>${org.eclipse.jetty.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-rewrite</artifactId>
-            <version>9.2.0.M0</version>
+            <version>${org.eclipse.jetty.version}</version>
         </dependency>
 
         <dependency>
         	<groupId>org.eclipse.jetty.websocket</groupId>
         	<artifactId>websocket-servlet</artifactId>
-        	<version>9.2.0.M0</version>
+        	<version>${org.eclipse.jetty.version}</version>
         </dependency>
 
         <dependency>
         	<groupId>org.eclipse.jetty.websocket</groupId>
         	<artifactId>websocket-server</artifactId>
-        	<version>9.2.0.M0</version>
+        	<version>${org.eclipse.jetty.version}</version>
         </dependency>
 
         <dependency>
@@ -50,6 +64,13 @@
             <artifactId>json-simple</artifactId>
             <version>1.1.1</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.6.2</version>
+        </dependency>
+
 
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
