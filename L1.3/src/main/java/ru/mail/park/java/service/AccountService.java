@@ -1,8 +1,9 @@
-package main;
+package ru.mail.park.java.service;
 
-import rest.UserProfile;
 
 import java.util.Collection;
+
+import ru.mail.park.java.domain.UserProfile;
 
 /**
  * Created by e.shubin on 24.03.2016.
@@ -10,7 +11,7 @@ import java.util.Collection;
 public interface AccountService {
     Collection<UserProfile> getAllUsers();
 
-    boolean addUser(String userName, UserProfile userProfile);
+    boolean addUser(String userName, String password);
 
     UserProfile getUser(String userName);
 }
